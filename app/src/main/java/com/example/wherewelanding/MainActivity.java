@@ -11,16 +11,11 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-
     Button buttonDrop;
     ImageView imgLandingSpot;
     TextView txtLandingSpot;
 
-    //landingSpots tiltedTowers = new landingSpots("Tilted Towers", getResources().getIdentifier("@drawable/imgtiltedtowers", null, this.getPackageName()));
-    //landingSpots paradisePalms = new landingSpots("Paradise Palms", getResources().getIdentifier("@drawable/imgparadisepalms", null, this.getPackageName()));
-
-    public landingSpots landingSpotsArray[] = new landingSpots[2];
-
+    public landingSpots landingSpotsArray[] = new landingSpots[21];
 
     public int ChangeLandingSpotImage() {
         int i = getResources().getIdentifier("@drawable/imgtiltedtowers", null, this.getPackageName());
@@ -31,8 +26,27 @@ public class MainActivity extends AppCompatActivity {
     {
         _landingSpotsArray[0] = new landingSpots("Tilted Towers", getResources().getIdentifier("@drawable/imgtiltedtowers", null, this.getPackageName()));
         _landingSpotsArray[1] = new landingSpots("Paradise Palms", getResources().getIdentifier("@drawable/imgparadisepalms", null, this.getPackageName()));
-
-    }
+        _landingSpotsArray[2] = new landingSpots("Desert Village", getResources().getIdentifier("@drawable/imgdesertvillage", null, this.getPackageName()));
+        _landingSpotsArray[3] = new landingSpots("Fatal Fields", getResources().getIdentifier("@drawable/imgfatalfields", null, this.getPackageName()));
+        _landingSpotsArray[4] = new landingSpots("Frosty Flights", getResources().getIdentifier("@drawable/imgfrostyflights", null, this.getPackageName()));
+        _landingSpotsArray[5] = new landingSpots("GUS", getResources().getIdentifier("@drawable/imggus", null, this.getPackageName()));
+        _landingSpotsArray[6] = new landingSpots("Happy Hamlet", getResources().getIdentifier("@drawable/imghappyhamlet", null, this.getPackageName()));
+        _landingSpotsArray[7] = new landingSpots("Haunted Hills", getResources().getIdentifier("@drawable/imghauntedhills", null, this.getPackageName()));
+        _landingSpotsArray[8] = new landingSpots("Junk Junction", getResources().getIdentifier("@drawable/imgjunkjunction", null, this.getPackageName()));
+        _landingSpotsArray[9] = new landingSpots("Lazy Links", getResources().getIdentifier("@drawable/imglazylinks", null, this.getPackageName()));
+        _landingSpotsArray[10] = new landingSpots("Lonely Lodge", getResources().getIdentifier("@drawable/imglonelylodge", null, this.getPackageName()));
+        _landingSpotsArray[11] = new landingSpots("Loot Lake", getResources().getIdentifier("@drawable/imglootlake", null, this.getPackageName()));
+        _landingSpotsArray[12] = new landingSpots("Lucky Landing", getResources().getIdentifier("@drawable/imgluckylanding", null, this.getPackageName()));
+        _landingSpotsArray[13] = new landingSpots("Pleasant Park", getResources().getIdentifier("@drawable/imgpleasantpark", null, this.getPackageName()));
+        _landingSpotsArray[13] = new landingSpots("Polar Peak", getResources().getIdentifier("@drawable/imgpolarpeak", null, this.getPackageName()));
+        _landingSpotsArray[14] = new landingSpots("Retail Row", getResources().getIdentifier("@drawable/imgretailrow", null, this.getPackageName()));
+        _landingSpotsArray[15] = new landingSpots("Salty Springs", getResources().getIdentifier("@drawable/imgsaltysprings", null, this.getPackageName()));
+        _landingSpotsArray[16] = new landingSpots("Shifty Shafts", getResources().getIdentifier("@drawable/imgshiftyshafts", null, this.getPackageName()));
+        _landingSpotsArray[17] = new landingSpots("Snobby Shores", getResources().getIdentifier("@drawable/imgsnobbyshores", null, this.getPackageName()));
+        _landingSpotsArray[18] = new landingSpots("The Block", getResources().getIdentifier("@drawable/imgtheblock", null, this.getPackageName()));
+        _landingSpotsArray[19] = new landingSpots("Tomato Temple", getResources().getIdentifier("@drawable/imgtomatotemple", null, this.getPackageName()));
+        _landingSpotsArray[20] = new landingSpots("Wailing Woods", getResources().getIdentifier("@drawable/imgwailingwoods", null, this.getPackageName()));
+     }
 
     public landingSpots ReturnRandomSpot(landingSpots _landingSpotsArray[])
     {
@@ -65,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
             {
                 imgLandingSpot.setVisibility(View.GONE);
                 txtLandingSpot.setVisibility(View.GONE);
-                
+
                 landingSpots generatedSpot = ReturnRandomSpot(landingSpotsArray);
                 imgLandingSpot.setImageResource(generatedSpot.getSpotImage());
                 txtLandingSpot.setText(generatedSpot.getSpotName());
